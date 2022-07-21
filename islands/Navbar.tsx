@@ -3,9 +3,11 @@ import { h } from "preact";
 import { useState } from "preact/hooks";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { tw } from "@twind";
+import type {routeType} from "../types/type.ts"
+
 
 interface LinksProps {
-  links: Array<string | string>;
+  links: Array<routeType>;
 }
 
 export default function Navbar(props: LinksProps) {
@@ -25,7 +27,7 @@ export default function Navbar(props: LinksProps) {
           <div class={tw`w-1/2 xl:w-1/3`}>
             <ul class={tw`hidden xl:flex xl:justify-center`}>
               {/* Add autoimaticaly routes */}
-              {props.links.map((v) => {
+              {props.links.map((v: routeType) => {
                 return (
                   <li class={tw`mr-12`}>
                     <a
