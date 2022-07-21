@@ -16,3 +16,13 @@ A simple portfolio app develop with PocketBase and Fresh Framework
 ✔️ Contact me\
 ✔️ Twitter Timeline\
 ✔️ GitHub Profile
+
+### Usage
+
+Start the project:
+
+```
+deno task start
+```
+
+This will watch the project directory and restart as necessary.
