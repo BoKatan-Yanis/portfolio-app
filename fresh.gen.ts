@@ -3,30 +3,34 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $0 from "./routes/api/joke.ts";
-import * as $1 from "./routes/exemple.tsx";
-import * as $2 from "./routes/index.tsx";
+import * as $1 from "./routes/article.tsx";
+import * as $2 from "./routes/exemple.tsx";
+import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/Articles.tsx";
 import * as $$1 from "./islands/Counter.tsx";
 import * as $$2 from "./islands/Footer.tsx";
 import * as $$3 from "./islands/Header.tsx";
-import * as $$4 from "./islands/Projects.tsx";
-import * as $$5 from "./islands/Services.tsx";
-import * as $$6 from "./islands/Technologies.tsx";
+import * as $$4 from "./islands/Navbar.tsx";
+import * as $$5 from "./islands/Projects.tsx";
+import * as $$6 from "./islands/Services.tsx";
+import * as $$7 from "./islands/Technologies.tsx";
 
 const manifest = {
   routes: {
     "./routes/api/joke.ts": $0,
-    "./routes/exemple.tsx": $1,
-    "./routes/index.tsx": $2,
+    "./routes/article.tsx": $1,
+    "./routes/exemple.tsx": $2,
+    "./routes/index.tsx": $3,
   },
   islands: {
     "./islands/Articles.tsx": $$0,
     "./islands/Counter.tsx": $$1,
     "./islands/Footer.tsx": $$2,
     "./islands/Header.tsx": $$3,
-    "./islands/Projects.tsx": $$4,
-    "./islands/Services.tsx": $$5,
-    "./islands/Technologies.tsx": $$6,
+    "./islands/Navbar.tsx": $$4,
+    "./islands/Projects.tsx": $$5,
+    "./islands/Services.tsx": $$6,
+    "./islands/Technologies.tsx": $$7,
   },
   baseUrl: import.meta.url,
 };
