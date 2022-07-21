@@ -3,9 +3,11 @@ import { h } from "preact";
 import { useState } from "preact/hooks";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { tw } from "@twind";
+import { headerType } from "../types/type.ts";
+
 
 interface HeaderProps {
-  description: string;
+  header: headerType;
 }
 
 export default function Header(props: HeaderProps) {
@@ -15,9 +17,9 @@ export default function Header(props: HeaderProps) {
     <div class={tw`container px-4 mx-auto`}>
       <div class={tw`flex flex-wrap xl:items-center -mx-4`}>
         <div class={tw`w-full md:w-1/2 px-4 mb-16 md:mb-0`}>
-          <span class={tw`inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-red-500 uppercase rounded-9xl`}>Header</span>
-          <h1 class={tw`mb-6 text-3xl md:text-5xl lg:text-6xl leading-tight font-bold tracking-tight`}>{props.description}</h1>
-          <p class={tw`mb-8 text-lg md:text-xl text-purple-500 font-medium`}>We’re different. Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.</p>
+          <span class={tw`inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-red-500 uppercase rounded-9xl`}>{props.header.subtitle}</span>
+          <h1 class={tw`mb-6 text-3xl md:text-5xl lg:text-6xl leading-tight font-bold tracking-tight`}>{props.header.title}</h1>
+          <p class={tw`mb-8 text-lg md:text-xl text-purple-500 font-medium`}>{props.header.description}</p>
           <div class={tw`flex flex-wrap`}>
             <div class={tw`w-full md:w-auto py-1 md:py-0 md:mr-4`}><a class={tw`inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-red-50 font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 border border-red-500 rounded-md shadow-sm`} href="#">Request a Demo</a></div>
             <div class={tw`w-full md:w-auto py-1 md:py-0`}><a class={tw`inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-purple-800 font-medium text-center bg-white hover:bg-purple-100 focus:ring-2 focus:ring-purple-200 focus:ring-opacity-50 border border-purple-200 rounded-md shadow-sm`} href="#">Sign Up</a></div>
@@ -33,7 +35,7 @@ export default function Header(props: HeaderProps) {
             </svg>
             <div class={tw`relative overflow-hidden rounded-7xl`}>
               <img src="https://shuffle.dev/flex-ui-assets/images/headers/placeholder-video.png"/>
-              <video class={tw`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 min-h-full min-w-full max-w-none`} poster="https://shuffle.dev/flex-ui-assets/images/testimonials/video-frame.jpeg" muted="">
+              <video class={tw`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 min-h-full min-w-full max-w-none`} poster="https://shuffle.dev/flex-ui-assets/images/testimonials/video-frame.jpeg" muted>
                 <source src="https://static.shuffle.dev/files/video-placeholder.mp4" type="video/mp4"/>
               </video>
             </div>
