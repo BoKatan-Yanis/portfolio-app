@@ -1,21 +1,24 @@
 /** @jsx h */
-import { h } from "preact";
 import { tw } from "@twind";
+import { h } from "preact";
+import Articles from "../islands/Articles.tsx";
 import Counter from "../islands/Counter.tsx";
+import Footer from "../islands/Footer.tsx";
+import Header from "../islands/Header.tsx";
+import Projects from "../islands/Projects.tsx";
+import Services from "../islands/Services.tsx";
+import Technologies from "../islands/Technologies.tsx";
+
 
 export default function Home() {
   return (
-    <div class={tw`p-4 mx-auto max-w-screen-md`}>
-      <img
-        src="/logo.svg"
-        height="100px"
-        alt="the fresh logo: a sliced lemon dripping with juice"
-      />
-      <p class={tw`my-6`}>
-        Welcome to `fresh`. Try update this message in the ./routes/index.tsx
-        file, and refresh.
-      </p>
-      <Counter start={3} />
-    </div>
+    <main>
+      <Header description={"Ceci est le portfolio de Yanis"} />
+      <Projects></Projects>
+      <Articles start={1}></Articles>
+      <Services></Services>
+      <Technologies></Technologies>
+      <Footer></Footer>
+    </main>
   );
 }
