@@ -1,8 +1,8 @@
 /** @jsx h */
 import { tw } from "@twind";
 import { h } from "preact";
+import { useState } from "preact/hooks";
 import Articles from "../islands/Articles.tsx";
-import Counter from "../islands/Counter.tsx";
 import Footer from "../islands/Footer.tsx";
 import Header from "../islands/Header.tsx";
 import Projects from "../islands/Projects.tsx";
@@ -10,7 +10,14 @@ import Services from "../islands/Services.tsx";
 import Technologies from "../islands/Technologies.tsx";
 import Navbar from "../islands/Navbar.tsx";
 
+import {createOne, getFullList} from '@helper'
+
+
+const data = await getFullList('article');
+
 export default function Home() {
+  
+  const [articles, setArticles] = useState(data);
   return (
     <main>
       <Navbar links={[
@@ -28,10 +35,20 @@ export default function Home() {
         }}
       />
       <Projects></Projects>
+
+      {/* Exemple de l'utilisation de l'api */}
+      <ul>
+      {articles.map((d)=> {
+        return ( <li> {d.title}</li>)
+      })}
+      </ul>
+
+
       <Articles start={1}></Articles>
       <Services></Services>
       <Technologies></Technologies>
       <Footer></Footer>
+
     </main>
   );
 }
