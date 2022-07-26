@@ -24,7 +24,8 @@ const client = new PocketBase('http://localhost:8090');
         return record;
         })
         .catch(function (error : any) {
-            return error;
+            throw new Error(error);
+             
         });
  }
 
