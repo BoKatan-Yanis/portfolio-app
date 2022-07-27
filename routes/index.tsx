@@ -10,6 +10,7 @@ import Services from "../islands/Services.tsx";
 import Technologies from "../islands/Technologies.tsx";
 import Navbar from "../islands/Navbar.tsx";
 import ArticleExemple from "../islands/ArticleExemple.tsx";
+import ProjectIsland from "../islands/ProjectIsland.tsx";
 
 export default function Home() {
   return (
@@ -29,9 +30,10 @@ export default function Home() {
             "We’re different. Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.",
         }}
       />
-      <Projects></Projects>
+      <ProjectIsland start={1}></ProjectIsland>
 
       <ArticleExemple start={1}></ArticleExemple>
+      
 
       {/* 
       A ne plus utiliser

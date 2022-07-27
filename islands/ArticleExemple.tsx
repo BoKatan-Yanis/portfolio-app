@@ -21,9 +21,7 @@ export default function ArticleExemple(props: CounterProps) {
   //   remove an item
   const handleRemoveItem = (id) => {
     mergeData("article", articles.filter((a) => a.id !== id));
-    setArticles(articles.filter((a) => a.id !== id), () => {
-      console.log("setter callback");
-    });
+    setArticles(articles.filter((a) => a.id !== id));
   };
 
   //   add an item
