@@ -3,7 +3,7 @@ import { createRef, h } from "preact";
 import { setState, useRef, useState } from "preact/hooks";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { tw } from "@twind";
-import { createOne, getFullList, mergeData } from "@helper";
+import { getFullList, mergeData } from "@helper";
 
 // Setup of the type received in props
 interface CounterProps {
@@ -55,8 +55,8 @@ export default function ArticleExemple(props: CounterProps) {
 
           {articles?.map((d) => {
             return (
-              <div class={tw`w-full md:w-1/3 p-9`}>
-                <a class={tw`group`} href="#">
+              <div class={tw`w-full md:w-1/3 p-9`} key={ d.id }>
+                <a class={tw`group`} href="#" >
                   <div
                     class={tw
                       `group flex flex-col mb-5 overflow-hidden rounded-xl`}
