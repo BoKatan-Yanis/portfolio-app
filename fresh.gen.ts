@@ -5,14 +5,15 @@
 import * as $0 from "./routes/api/joke.ts";
 import * as $1 from "./routes/exemple.tsx";
 import * as $2 from "./routes/index.tsx";
-import * as $$0 from "./islands/Articles.tsx";
-import * as $$1 from "./islands/Counter.tsx";
-import * as $$2 from "./islands/Footer.tsx";
-import * as $$3 from "./islands/Header.tsx";
-import * as $$4 from "./islands/Navbar.tsx";
-import * as $$5 from "./islands/Projects.tsx";
-import * as $$6 from "./islands/Services.tsx";
-import * as $$7 from "./islands/Technologies.tsx";
+import * as $$0 from "./islands/ArticleExemple.tsx";
+import * as $$1 from "./islands/Articles.tsx";
+import * as $$2 from "./islands/Counter.tsx";
+import * as $$3 from "./islands/Footer.tsx";
+import * as $$4 from "./islands/Header.tsx";
+import * as $$5 from "./islands/Navbar.tsx";
+import * as $$6 from "./islands/Projects.tsx";
+import * as $$7 from "./islands/Services.tsx";
+import * as $$8 from "./islands/Technologies.tsx";
 
 const manifest = {
   routes: {
@@ -21,14 +22,15 @@ const manifest = {
     "./routes/index.tsx": $2,
   },
   islands: {
-    "./islands/Articles.tsx": $$0,
-    "./islands/Counter.tsx": $$1,
-    "./islands/Footer.tsx": $$2,
-    "./islands/Header.tsx": $$3,
-    "./islands/Navbar.tsx": $$4,
-    "./islands/Projects.tsx": $$5,
-    "./islands/Services.tsx": $$6,
-    "./islands/Technologies.tsx": $$7,
+    "./islands/ArticleExemple.tsx": $$0,
+    "./islands/Articles.tsx": $$1,
+    "./islands/Counter.tsx": $$2,
+    "./islands/Footer.tsx": $$3,
+    "./islands/Header.tsx": $$4,
+    "./islands/Navbar.tsx": $$5,
+    "./islands/Projects.tsx": $$6,
+    "./islands/Services.tsx": $$7,
+    "./islands/Technologies.tsx": $$8,
   },
   baseUrl: import.meta.url,
 };

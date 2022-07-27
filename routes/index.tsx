@@ -9,21 +9,16 @@ import Projects from "../islands/Projects.tsx";
 import Services from "../islands/Services.tsx";
 import Technologies from "../islands/Technologies.tsx";
 import Navbar from "../islands/Navbar.tsx";
-
-import {createOne, getFullList} from '@helper'
-
-
-const data = await getFullList('article');
+import ArticleExemple from "../islands/ArticleExemple.tsx";
 
 export default function Home() {
-  
-  const [articles, setArticles] = useState(data);
   return (
     <main>
-      <Navbar links={[
+      <Navbar
+        links={[
           { name: "Product", url: "#" },
           { name: "Feature", url: "#" },
-          { name: "Ressources", url: "#" }
+          { name: "Ressources", url: "#" },
         ]}
       />
       <Header
@@ -36,19 +31,15 @@ export default function Home() {
       />
       <Projects></Projects>
 
-      {/* Exemple de l'utilisation de l'api */}
-      <ul>
-      {articles.map((d)=> {
-        return ( <li> {d.title}</li>)
-      })}
-      </ul>
+      <ArticleExemple start={1}></ArticleExemple>
 
+      {/* 
+      A ne plus utiliser
+      <Articles start={1}></Articles> */}
 
-      <Articles start={1}></Articles>
       <Services></Services>
       <Technologies></Technologies>
       <Footer></Footer>
-
     </main>
   );
 }
