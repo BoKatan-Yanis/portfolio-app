@@ -9,5 +9,7 @@ type headerType = {
     subtitle?: string,
     description?:string
 }
-
-export type { routeType, headerType };
+type articleType = {
+  title: string
+}
+export type { routeType, headerType, articleType };

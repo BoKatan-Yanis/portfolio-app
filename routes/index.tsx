@@ -1,22 +1,24 @@
 /** @jsx h */
 import { tw } from "@twind";
 import { h } from "preact";
+import { useState } from "preact/hooks";
 import Articles from "../islands/Articles.tsx";
-import Counter from "../islands/Counter.tsx";
 import Footer from "../islands/Footer.tsx";
 import Header from "../islands/Header.tsx";
 import Projects from "../islands/Projects.tsx";
 import Services from "../islands/Services.tsx";
 import Technologies from "../islands/Technologies.tsx";
 import Navbar from "../islands/Navbar.tsx";
+import ArticleExemple from "../islands/ArticleExemple.tsx";
 
 export default function Home() {
   return (
     <main>
-      <Navbar links={[
+      <Navbar
+        links={[
           { name: "Product", url: "#" },
           { name: "Feature", url: "#" },
-          { name: "Ressources", url: "#" }
+          { name: "Ressources", url: "#" },
         ]}
       />
       <Header
@@ -28,7 +30,13 @@ export default function Home() {
         }}
       />
       <Projects></Projects>
-      <Articles start={1}></Articles>
+
+      <ArticleExemple start={1}></ArticleExemple>
+
+      {/* 
+      A ne plus utiliser
+      <Articles start={1}></Articles> */}
+
       <Services></Services>
       <Technologies></Technologies>
       <Footer></Footer>
