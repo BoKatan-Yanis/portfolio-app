@@ -41,11 +41,10 @@ export default function ArticleExemple(props: CounterProps) {
             class={tw
               `mb-4 font-heading font-semibold text-gray-900 text-6xl sm:text-7xl`}
           >
-            Les articles sont dynamiques
+            Liste des articles
           </h2>
           <p class={tw`text-lg text-gray-500`}>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim.
+            Voici la liste des derniers articles
           </p>
         </div>
         <div class={tw`flex flex-wrap -m-9`}>

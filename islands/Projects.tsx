@@ -28,14 +28,11 @@ export default function Projects() {
       <div class={tw`py-20 bg-purple-600 radius-for-skewed`}>
         <div class={tw`container mx-auto px-4`}>
           <div class={tw`mb-8 md:mb-16 max-w-lg mx-auto text-center`}>
-            <span class={tw`text-purple-400 font-bold`}>
-              Dolor sit amet consectutar
-            </span>
             <h2
               class={tw
                 `mb-6 text-4xl lg:text-5xl font-bold font-heading text-white`}
             >
-              Latest Projects
+              Mes derniers projets
             </h2>
             <div
               class={tw
