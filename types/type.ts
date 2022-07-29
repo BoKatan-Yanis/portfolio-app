@@ -4,6 +4,12 @@ type routeType = {
     name: string;
   };
 
+  
+type routeTypeAdmin = {
+    url: string;
+    title: string;
+  };
+
 type headerType = {
     title: string,
     subtitle?: string,
